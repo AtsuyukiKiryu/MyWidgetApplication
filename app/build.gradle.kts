@@ -41,7 +41,7 @@ android {
         viewBinding = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packaging {
         resources {
@@ -60,6 +60,13 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.glance.appwidget)
+    // For AppWidgets support
+    implementation ("androidx.glance:glance-appwidget:1.1.0")
+    // For interop APIs with Material 3
+    implementation ("androidx.glance:glance-material3:1.1.0")
+    // For interop APIs with Material 2
+    implementation ("androidx.glance:glance-material:1.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
